@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Ejercicios prácticos HTML</title>
+		<meta charset="utf-8">
+		<link href="../style_copy.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<center>
+		<table id="tabla1" border="1" width="778px">
+
+			</thead>
+			<tfoot>
+				<tr>
+
+                    
+                        <td id="nested" colspan="4" >
+                            <table id="tabla2"  border="0" align="center" >
+
+
+                                <center><h2>Registro</h2></center>
+
+                                    <form action="../modelo/BD.php" method="POST" name='formulario-js' onsubmit='return validar()'>
+                                        <td id="neste"  >
+                                            <table id="tabla3" width="100%" border="0" align="center">
+                                                <tr>
+                                                    <td align="center">Cedula</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center"><input type="text" name="CEDULA" id="CEDULA" required/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">Nombre</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center"><input type="text" name="NOMBRE" id="NOMBRE" pattern="^[A-Za-z]+$" maxlength="35" title="Escriba solo letras" required/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">Apellido</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center"><input type="text" id="APELLIDO" name="APELLIDO" pattern="^[A-Za-z]+$" maxlength="35" title="Escriba solo letras" required/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">Fechas de nacimiento</td>
+                                                </tr>
+                                                <tr>
+                                                 
+                                                    <td align="center"><input type="date"  max="2004-12-31" name="FECHA" id="FECHA"  required/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">Usuario</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center"><input type="text" name="USUARIO" id="USUARIO" required/></td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center">Clave</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center"> <input type="password" name="CLAVE" minlength="8" maxlength="10" pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*" title="Una contraseña válida es un conjuto de caracteres, donde cada uno consiste de una letra mayúscula o minúscula, o un dígito. La contraseña debe empezar con una letra y contener al menor un dígito" required></td>
+                                                    
+                                                </tr>
+                                            
+                                                <td id="nest"  >
+                                                    <table id="tabla4" width="100%" border="0" align="center">
+                                                        <tr >
+                                                            <td align="center"><input type="submit" name="btnaceptar" value="Registrar"></td>
+                                                            <td ><input type="reset" name="btncancelar" value="Listar"></td>
+                                                        </tr>
+
+                                                    </table> 
+                                                </td>
+
+                                            </table>
+                                        </td>
+                                    </form>
+                            </table>
+                        </td>
+                   
+
+				<tr>
+					<th colspan="4">Autor: Abraham David</th>
+				</tr>
+				</tr>
+			</tfoot>
+			<tbody>
+
+				<tr>
+
+					<th ><img src="../imagen/logo.png"width="100" height="100" alt="InternetCtrl"></th>
+					<th colspan="3"><img src="../imagen/banner.jpg"width="680" height="180" alt="InternetCtrl"></th>
+				</tr>					
+				<tr>
+					
+					<td><h1 align ="right"><a href="../index.html">Inicio</a></h1></td>
+					<td ><center><h1><a href="curriculo.html">Autores</a></h1></center></td>
+					<td ><h1 ><a  href="galeria.html">Galeria</a></h1></td>
+                    <td ><h1><a  href="formulario.html">Persona</a></h1></td>
+				</tr>
+
+			</tbody>
+		</table>
+		</center>
+	</body>
+
+
+    <script type='text/javascript'>
+
+
+        function validar(){
+        
+        var todo_correcto = true;
+        
+        if(isNaN(document.getElementById('CEDULA').value)){
+            todo_correcto = false;
+        }
+        
+        if(document.getElementById('NOMBRE').value.length < 2 ){
+            todo_correcto = false;
+        }
+        
+        if(document.getElementById('APELLIDO').value.length < 2 ){
+            todo_correcto = false;
+        }
+
+
+        if(!todo_correcto){
+        alert('Algunos campos no están correctos, vuelva a revisarlos');
+        }
+        
+        return todo_correcto;
+        }
+        
+        </script>
+</html>
